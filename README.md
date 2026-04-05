@@ -138,7 +138,8 @@ create-gf/
 - **[WeChatMsg](https://github.com/LC044/WeChatMsg)** ：微信记录导出
 - **Telegram Desktop** ：自带 JSON 导出功能
 
+## 感谢
+[ex-skill](https://github.com/therealXiaomanChu/ex-skill)) 
 ---
 
-### 勿忘那个午后，她在高铁站为你送行，她是多么希望你能找一个remote工作能一直陪着她啊...
 MIT License © 2026 xmlans
