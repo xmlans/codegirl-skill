@@ -139,7 +139,7 @@ create-gf/
 - **Telegram Desktop** ：自带 JSON 导出功能
 
 ## 感谢
-[ex-skill](https://github.com/therealXiaomanChu/ex-skill)) 
+[ex-skill](https://github.com/therealXiaomanChu/ex-skill)
 ---
 
 MIT License © 2026 xmlans
