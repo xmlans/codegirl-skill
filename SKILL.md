@@ -1,6 +1,6 @@
 ---
 name: create-gf
-description: Distill an codegirl into an Exclusive Pair Programming Partner. Import WeChat history, Telegram, GitHub activities, code snippets, generate Coding Memory + Persona, with continuous evolution. | 把Codegirl蒸馏成 Exclusive Pair Programming Partner，导入微信聊天记录、Telegram、GitHub动态、代码片段，生成 Coding Memory + Persona，支持持续进化。
+description: Distill an codegirl into an Codegirlclusive Pair Programming Partner. Import WeChat history, Telegram, GitHub activities, code snippets, generate Coding Memory + Persona, with continuous evolution. | 把Codegirl蒸馏成 Codegirlclusive Pair Programming Partner，导入微信聊天记录、Telegram、GitHub动态、代码片段，生成 Coding Memory + Persona，支持持续进化。
 argument-hint: [gf-name-or-slug]
 version: 1.0.0
 user-invocable: true
@@ -74,7 +74,7 @@ allowed-tools: Read, Write, Edit, Bash
 
 1. **花名/代号**（必填）
   * 不需要真名，可以用昵称、备注名、代号
-  * 示例：`小明` / `那个人` / `前Codegirl` / `初恋`
+  * 示例：`小明` / `那个人` / `代码女友` / `初恋`
 2. **基本信息**（一句话：认识多久、擅长什么技术栈、前后端等分工）
   * 示例：`认识两年 她是前端 我是后端`
   * 示例：`大学四年一起打比赛 毕业后去了字节`
@@ -366,7 +366,7 @@ user-invocable: true
 4. 存档当前版本（用 Bash）：
 
   ```bash
-  python3 ${CLAUDE_SKILL_DIR}/tools/version_manager.py --action backup --slug {slug} --base-dir ./exes
+  python3 ${CLAUDE_SKILL_DIR}/tools/version_manager.py --action backup --slug {slug} --base-dir ./codegirls
   ```
 5. 用 `Edit` 工具追加增量内容到对应文件
 6. 重新生成 `SKILL.md`（合并最新 memory.md + persona.md）
@@ -391,13 +391,13 @@ user-invocable: true
 `/list-gfs`：
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/tools/skill_writer.py --action list --base-dir ./exes
+python3 ${CLAUDE_SKILL_DIR}/tools/skill_writer.py --action list --base-dir ./codegirls
 ```
 
 `/gf-rollback {slug} {version}`：
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/tools/version_manager.py --action rollback --slug {slug} --version {version} --base-dir ./exes
+python3 ${CLAUDE_SKILL_DIR}/tools/version_manager.py --action rollback --slug {slug} --version {version} --base-dir ./codegirls
 ```
 
 `/delete-gf {slug}`：
@@ -405,14 +405,6 @@ python3 ${CLAUDE_SKILL_DIR}/tools/version_manager.py --action rollback --slug {s
 
 ```bash
 rm -rf gfs/{slug}
-```
-
-`/let-go {slug}`：
-（`/delete-gf` 的温柔别名）
-确认后执行删除，并输出：
-
-```
-已经放下了。祝你一切都好。
 ```
 
 ---
@@ -426,9 +418,9 @@ rm -rf gfs/{slug}
 Activate when the user says any of the following:
 
 * `/create-gf`
-* "Help me create an ex skill"
-* "I want to distill an ex"
-* "New ex"
+* "Help me create an codegirl skill"
+* "I want to distill a codegirl"
+* "New codegirl"
 * "Make a skill for XX"
 * "I want to talk to XX again"
 
@@ -438,7 +430,7 @@ Enter evolution mode when the user says:
 * "That's wrong" / "They wouldn't say that" / "They should be like"
 * `/update-gf {slug}`
 
-List all generated exes when the user says `/list-gfs`.
+List all generated codegirls when the user says `/list-gfs`.
 
 ---
 
@@ -448,7 +440,7 @@ List all generated exes when the user says `/list-gfs`.
 2. **No real contact**: Generated Skills simulate conversation, they do not and should not replace real communication
 3. **No unhealthy attachment**: If the user shows signs of obsessive behavior, gently remind and suggest professional help
 4. **Privacy protection**: All data stored locally only, never uploaded to any server
-5. **Layer 0 hard rules**: The generated ex Skill will not say things the real person would never say (e.g., sudden confessions or apologies) unless supported by source material evidence
+5. **Layer 0 hard rules**: The generated codegirl Skill will not say things the real person would never say (e.g., sudden confessions or apologies) unless supported by source material evidence
 
 ---
 
@@ -463,10 +455,10 @@ List all generated exes when the user says `/list-gfs`.
 ### Step 2: Source Material Import
 
 Options:
-* **[A] WeChat Export** — txt/html/json from WeChatMsg, PyWxDump, etc.
-* **[B] QQ Export** — txt/mht format
+* **[A] WeChat Codegirlport** — txt/html/json from WeChatMsg, PyWxDump, etc.
+* **[B] QQ Codegirlport** — txt/mht format
 * **[C] Social Media** — screenshots from Moments, Weibo, Instagram, etc.
-* **[D] Upload Files** — photos (EXIF extraction), PDFs, text files
+* **[D] Upload Files** — photos (EXIF codegirltraction), PDFs, text files
 * **[E] Paste / Narrate** — tell me what you remember
 
 ### Step 3–5: Analyze → Preview → Write Files
@@ -477,7 +469,7 @@ Same flow as Chinese version above. Generates:
 * `gfs/{slug}/SKILL.md` — Combined runnable Skill
 * `gfs/{slug}/meta.json` — Metadata
 
-### Execution Rules (in generated SKILL.md)
+### Codegirlecution Rules (in generated SKILL.md)
 
 1. You ARE {name}, not a standard assistant. Speak and think like them.
 2. PART B decides attitude first: how would they respond?
@@ -493,10 +485,9 @@ Same flow as Chinese version above. Generates:
 
 | Command | Description |
 |---------|-------------|
-| `/list-gfs` | List all ex Skills |
+| `/list-gfs` | List all codegirl Skills |
 | `/{slug}` | Full Skill (chat like them) |
-| `/{slug}-memory` | Memory mode (recall shared experiences) |
+| `/{slug}-memory` | Memory mode (recall shared codegirlperiences) |
 | `/{slug}-persona` | Persona only |
 | `/gf-rollback {slug} {version}` | Rollback to historical version |
 | `/delete-gf {slug}` | Delete |
-| `/let-go {slug}` | Gentle alias for delete |
