@@ -52,7 +52,8 @@ pip3 install -r requirements.txt
 按提示输入她的代号、基本信息、性格/技术画像，然后选择数据来源。
 完成后用 /{slug} 调用该女友 Skill，开始结对编程。
 
-你也可以使用
+你也可以使用各类IDE编辑器的Agent，只需要克隆此仓库并使用此Skill，将生成好的信息存放到<code>.agents\rules</code>即可
+
 ### 管理命令
 
 | 命令 | 说明 |
